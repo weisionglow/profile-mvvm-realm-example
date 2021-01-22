@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.lwseasy.lwsprofile.constant.ClickModel" />
+
+        <variable
+            name="viewModel"
+            type="com.lwseasy.lwsprofile.view.main.MainViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/global_16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="2dp"
+                app:cardCornerRadius="@dimen/radius_8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/global_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            style="@style/fontNunito900"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/personal_detail"
+                            android:textColor="@color/black_2C2323"
+                            android:textSize="@dimen/text_24sp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:onClick="@{()->viewModel.clickButton(ClickModel.Edit)}"
+                            android:src="@drawable/ic_edit" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/line_1dp"
+                        android:layout_marginVertical="@dimen/global_16dp"
+                        android:background="@color/line_EFEFEF" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/fontNunito300"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Email" />
+
+                        <TextView
+                            style="@style/fontNunito400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/global_4dp"
+                            android:text="@{viewModel.personData.email}"
+                            android:textColor="@color/black_2C2323" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/global_16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/fontNunito300"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone Number" />
+
+                        <TextView
+                            style="@style/fontNunito400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/global_4dp"
+                            android:text="@{viewModel.personData.phoneNumber}"
+                            android:textColor="@color/black_2C2323" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/global_24dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/fontNunito900"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="About Me"
+                            android:textColor="@color/black_2C2323"
+                            android:textSize="@dimen/text_24sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/line_1dp"
+                            android:layout_marginVertical="@dimen/global_16dp"
+                            android:background="@color/line_EFEFEF" />
+
+                        <TextView
+                            style="@style/fontNunito400"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@{viewModel.personData.description}" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

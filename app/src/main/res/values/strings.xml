@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lws Profile</string>
+    <string name="about_me_description">Senior Android developer. Good knowledge of mobile platform architecture. Experience to work and discuss with iOS team, Backend team and Design Team in AGILE(JIRA and Confluent). Experience to leading a team to develop a new project, manage the timeline and monitor code quality. Keep update and share newest coding skill</string>
+    <string name="personal_detail">Personal Detail</string>
+</resources>
